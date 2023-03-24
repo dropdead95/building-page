@@ -1,0 +1,21 @@
+@import "./src/styles/variables";
+
+.normal {
+  padding: 11px 17px;
+  border: 1px solid $gold ;
+  border-radius: 50%;
+  color: $gold;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+}
+.active {
+  background-color: $gold;
+  color: #000000;
+}
+.passed {
+  background-color: #775C3A;
+  border: 1px solid #775C3A ;
+  color: #000000;
+}
+
