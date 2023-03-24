@@ -1,0 +1,44 @@
+@import "./src/styles/variables";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-size: 20px;
+  line-height: 23px;
+  color: $text-color;
+  margin-bottom: 40px;
+}
+.content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.anotherContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 400px;
+  cursor: pointer;
+}
+.checkbox {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $active-green;
+}
+.name {
+}

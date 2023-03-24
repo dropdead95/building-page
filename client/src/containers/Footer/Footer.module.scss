@@ -1,0 +1,143 @@
+@import "./src/styles/variables";
+
+.footer {
+  padding: 40px 0;
+  width: 100%;
+}
+.reviews {
+  display: flex;
+  flex-direction: column;
+
+}
+.title {
+  color: $active-green;
+  margin-bottom: 16px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.reviews_1 {
+  width: 200px;
+  height: 120px;
+}
+.logoBlock {
+  display: flex;
+  align-items: center;
+  margin-top: 59px;
+}
+.text {
+  font-size: 16px;
+  line-height: 20px;
+  color: gray;
+}
+
+.text span {
+  background: linear-gradient(90.69deg, #1c5771 -13.81%, #4a90ae 23.87%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.textInfo {
+  color: $active-green;
+}
+.textWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 32px;
+}
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+}
+.buttonFirst {
+  padding: 12.5px 20px;
+  text-align: left;
+  margin-top: 24px;
+}
+.buttonSecond {
+  padding: 15px 20px;
+  text-align: left;
+  margin-top: 24px;
+}
+.buttonFirst p {
+  width: 221px;
+}
+.arrow {
+  transform: rotate(180deg);
+}
+.left {
+  display: flex;
+  flex-direction: column;
+}
+.logoMobile {
+  display: none;
+}
+@media (max-width: 767px) {
+  .reviews {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+  .nav {
+    display: none;
+  }
+  .buttonFirst,
+  .buttonSecond {
+    padding: 10px 16px;
+    margin-top: 16px;
+  }
+  .buttonFirst,
+  .buttonSecond p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .textWrapper {
+    display: none;
+  }
+  .footer {
+    padding-top: 0;
+    padding-bottom: 16px;
+  }
+  .contacts {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    gap: 35px;
+  }
+  .left {
+    display: none;
+  }
+  .logoMobile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .text {
+    color: gray;
+    opacity: 1;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

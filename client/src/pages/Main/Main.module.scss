@@ -1,0 +1,253 @@
+@import "./src/styles/variables";
+
+.main {
+  position: relative;
+  flex: 1 1 auto;
+  padding-top: 85px;
+  padding-bottom: 80px;
+  box-shadow: -11px -10px 51px rgba(0, 0, 0, 0.25),
+  0px 0px 26px rgba(0, 0, 0, 0.53),
+  inset 4px 4px 27px rgba(137, 137, 137, 0.33);
+  border-radius: 0;
+}
+
+.container {
+}
+
+.content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 75px;
+  z-index: 2;
+}
+
+.application {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 47px;
+  text-transform: uppercase;
+  background: linear-gradient(91.24deg, #1eab5f 0.36%, #e7b97e 103.9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.desc span {
+  color: $active-green;
+}
+
+.input {
+  background-color: transparent;
+  border: 1px solid $active-green;
+  padding: 0 16px;
+  max-width: 428px;
+  height: 56px;
+  border-radius: 5px;
+  color: $text-color;
+
+  &::placeholder {
+    padding-top: 10px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.btn {
+  max-width: 426px;
+  height: 56px;
+  background: #1eab5f;
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 23px;
+  color: #f0fcf6;
+}
+
+.innerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.image {
+  position: absolute;
+  right: 350px;
+  top: 22px;
+  max-width: 412px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceTitle {
+  margin-bottom: 55.5px;
+}
+
+.serviceSubtitle {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.navigate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 16px;
+  height: 86px;
+  right: 0;
+  top: 276px;
+  background: $background;
+  box-shadow: -11px -10px 51px rgba(0, 0, 0, 0.25),
+  0px 0px 26px rgba(0, 0, 0, 0.53),
+  inset 4px 4px 27px rgba(137, 137, 137, 0.33);
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+}
+
+.mail {
+  margin-bottom: 16px;
+}
+
+.additional {
+  font-size: 12px;
+  line-height: 14px;
+  display: none;
+}
+
+.whatsUp {
+  display: none;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 8px;
+}
+
+.arrow {
+  display: none;
+  stroke: #e7b97e;
+}
+
+@media (max-width: 1200px) {
+  .image {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .info {
+    flex-wrap: wrap
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .image {
+    display: none;
+  }
+  .title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 24px;
+  }
+  .desc {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .additional {
+    display: block;
+  }
+  .content {
+    margin-bottom: 40px;
+    gap: 0;
+  }
+  .info {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .application {
+    margin-bottom: 8px;
+  }
+  .navigate {
+    top: 88px;
+    height: 58px;
+    padding: 10px 4px;
+  }
+  .whatsUp {
+    display: block;
+  }
+  .mail {
+    display: none;
+  }
+  .btn {
+    font-size: 14px;
+    line-height: 16px;
+    height: 40px;
+  }
+  .pen {
+    display: none;
+  }
+  .serviceTitle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $gold;
+    margin-bottom: 16px;
+
+    &:after {
+      display: none;
+    }
+  }
+  .serviceSubtitle {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .input {
+    height: 40px;
+
+    &::placeholder {
+      color: $text-color;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+  .arrow {
+    display: block;
+  }
+}

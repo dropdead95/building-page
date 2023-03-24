@@ -1,0 +1,17 @@
+.slider {
+  width: 660px;
+}
+.swiper {
+  position: unset;
+}
+.swiper-pagination {
+  display: flex;
+  gap: 16px;
+  padding-top: 23px;
+  left: 29%;
+}
+.swiper-pagination-bullet-active {
+  fill: #f0eeee;
+  width: 12px;
+  height: 12px;
+}

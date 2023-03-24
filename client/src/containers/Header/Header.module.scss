@@ -1,0 +1,150 @@
+@import "./src/styles/variables";
+
+.header {
+  min-height: 200px;
+  padding-top: 40.5px;
+  box-shadow: -11px -10px 51px rgba(0, 0, 0, 0.25),
+    0px 0px 26px rgba(0, 0, 0, 0.53);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.phoneWrapper {
+  text-align: center;
+}
+.number {
+  font-size: 20px;
+  line-height: 23px;
+  color: $active-green;
+}
+.text {
+  position: relative;
+  padding-left: 18px;
+  &:before {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $active-green;
+  }
+}
+.textSocials {
+  position: relative;
+  &:before {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $active-green;
+  }
+}
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 4px;
+}
+.socialWrapper {
+  text-align: center;
+}
+.btn {
+  color: $text-color;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 23.5px 60px;
+  background-color: #444343;
+  box-shadow: 0 0 4px rgba(51, 51, 51, 0.5);
+  border-radius: 5px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 34px;
+}
+.menuItem p {
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .nav {
+    gap: 10px;
+  }
+  .btn {
+    font-size: 12px;;
+    padding: 15px 30px;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .nav {
+    gap: 5px;
+  }
+
+}
+@media (max-width: 767px) {
+  .socialWrapper {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .btn {
+    display: none;
+  }
+  .logo {
+    width: 100.13px;
+    height: 22.52px;
+  }
+  .socialWrapper {
+    display: none;
+  }
+  .header {
+    min-height: 60px;
+    padding: 16px 0;
+  }
+  .container {
+    padding: 0 16px;
+  }
+  .text {
+    font-size: 12px;
+    line-height: 14px;
+    &:before {
+      width: 5px;
+      height: 5px;
+    }
+  }
+  .number {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .phoneIcon {
+    width: 14px;
+    height: 14px;
+  }
+  .nav {
+    display: none;
+  }
+  .info {
+    margin-bottom: 0;
+  }
+}

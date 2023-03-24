@@ -1,0 +1,23 @@
+@import "./src/styles/variables";
+
+.title {
+  position: relative;
+  color: $text-color;
+  max-width: 310px;
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 36px;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $text-color;
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    width: 200px;
+}}
+
+
