@@ -4,11 +4,11 @@ import axios from "axios";
 
 import styles from "./QuestionWrapper.module.scss";
 
-import { QuestionInner } from "../QuestionInner";
+
 
 export const QuestionWrapper = () => {
   const [questions, setQuestions] = useState([]);
-  let [path, setPath] = useState(1);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,7 +29,7 @@ export const QuestionWrapper = () => {
     };
     fetchData();
   }, []);
-  console.log(path);
+
   return (
     <div className={styles.content}>
       <div className={styles.navigation}>
@@ -39,18 +39,7 @@ export const QuestionWrapper = () => {
           </NavLink>
         ))}
       </div>
-      <Routes>
-        {questions.map((item) => (
-          <Route
-            key={item.id}
-            path={`${path}`}
-            element={<QuestionInner item={item} />}
-          />
-        ))}
-      </Routes>
-      <div onClick={() => setPath(++path)} className={styles.buttons}>
-        Следующий вопрос
-      </div>
+
     </div>
   );
 };
