@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * question service
+ * response service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::question.question');
+module.exports = createCoreService('api::response.response');
