@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./ContactForm.module.scss";
 
 import specialist from "../../assets/specialist.png";
-import { Form } from "../Form";
+import {Basic} from "../Form";
 
 export const ContactForm = () => {
   return (
@@ -21,7 +21,7 @@ export const ContactForm = () => {
         Не хотите отвечать на вопросы, оставьте заявку, и я проконсультирую вас
         по всем вопросам.
       </p>
-      <Form />
+      <Basic />
     </div>
   );
 };
