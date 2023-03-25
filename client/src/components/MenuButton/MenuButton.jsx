@@ -6,8 +6,8 @@ import styles from "./MenuButton.module.scss";
 export const MenuButton = ({ title, className, children }) => {
   return (
     <button className={classNames(styles.button, className)}>
-      <p>{title}</p>
       {children}
+      <p>{title}</p>
     </button>
   );
 };

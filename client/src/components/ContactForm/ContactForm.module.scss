@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+}
+
+.specialist {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.text {
+  margin-bottom: 24px;
+}
+
+.img {
+
+  border-radius: 50%;
+}

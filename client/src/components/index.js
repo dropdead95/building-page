@@ -10,3 +10,5 @@ export * from "./Quiz";
 export * from "./QuestionWrapper";
 export * from "./QuestionInner";
 export * from "./NavigationEl";
+export * from "./ContactForm";
+export * from "./Form";

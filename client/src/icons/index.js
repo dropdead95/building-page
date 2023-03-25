@@ -19,3 +19,4 @@ export * from "./Play";
 export * from "./Bullet";
 export * from "./YouTube";
 export * from "./Telegram";
+export * from "./Calculator";
