@@ -6,7 +6,10 @@ import { Container } from "../Container";
 import { QuestionWrapper } from "../QuestionWrapper";
 import { Pen } from "../../icons";
 
+
 export const QuizBuilding = () => {
+
+
   return (
     <section className={styles.wrapper}>
       <Container className={styles.quizContainer}>
