@@ -1,16 +1,13 @@
-import {applyMiddleware, combineReducers, legacy_createStore} from "redux";
-import thunk from 'redux-thunk'
-import {quizReducer} from "./quizReducer";
-import {initialReducer} from "./initialReducer";
+import { configureStore } from '@reduxjs/toolkit'
+import quizReducer from "./quizReducer";
 
 
-const reducers = combineReducers({
-    quiz: quizReducer,
-    initialData: initialReducer,
 
-})
 
-export const store = legacy_createStore(reducers, applyMiddleware(thunk))
+export const store = configureStore({reducer: {
+        quiz: quizReducer,
+/*        initialData: initialReducer,*/
+    }} )
 
 
 // @ts-ignore

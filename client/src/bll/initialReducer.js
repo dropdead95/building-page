@@ -1,3 +1,4 @@
+/*
 
 
 const initialState = {
@@ -20,4 +21,4 @@ export const initialReducer = (state = initialState, action)  => {
 
 
 export const setInitialDataAC = (data) =>
-    ({type: 'QUIZ/INITIAL', data})
+    ({type: 'QUIZ/INITIAL', data})*/

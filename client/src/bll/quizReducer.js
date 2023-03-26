@@ -1,26 +1,36 @@
 import {quizApi} from "./api/quizApi";
 import {setInitialDataAC} from "./initialReducer";
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 
 
-const initialState = [
+const initialState = []
+export const fetchQuizQuestion = createAsyncThunk('calls/fetchCalls', () => {
+    return quizApi.getQuizeQuestions().then((data) => data.data.data);
+});
+const quizSlice = createSlice({
+    name: 'quiz',
+    initialState,
+    reducers: {
+        setQuizQuestionsAC(state, action) {
+            state = [...state, action.data]
+        },
 
-]
+        extraReducers: (builder) => {
+            builder.addCase(fetchQuizQuestion.fulfilled, (state, action) => {
+                state = action.payload;
+            });
+        },
+    }});
+
+export const {setQuizQuestionsAC} = quizSlice.actions;
+
+export default quizSlice.reducer;
 
 
-export const quizReducer = (state = initialState, action)  => {
-    switch (action.type) {
-        case "QUIZ/SET-QUESTIONS":
-            console.log(action.data)
-            return [...state, action.data]
-
-        default:
-            return state
-    }
-}
 
 export const getQuizQuestionsTC = () => {
     return (dispatch) => {
-      quizApi.getQuizeQuestions()
+        quizApi.getQuizeQuestions()
             .then((res) => {
                 dispatch(setQuizQuestionsAC(res.data.data))
                 dispatch(setInitialDataAC(true))
@@ -31,6 +41,3 @@ export const getQuizQuestionsTC = () => {
 
     }
 }
-
-export const setQuizQuestionsAC = (data) =>
-    ({type: 'QUIZ/SET-QUESTIONS', data})
