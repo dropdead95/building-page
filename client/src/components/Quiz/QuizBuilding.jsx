@@ -1,9 +1,9 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 import styles from "./QuizBuilding.module.scss";
 
-import { Container } from "../Container";
-import { QuestionWrapper } from "../QuestionWrapper";
+import { Container } from "../../components";
 import { Pen } from "../../icons";
 
 
@@ -18,8 +18,7 @@ export const QuizBuilding = () => {
           сроку.
           <span>Гарантия до 5 лет.</span>
         </p>
-
-        <QuestionWrapper />
+        <Outlet />
         <div className={styles.buttons}>
           <button type="button" className={styles.btn}>
             <span className={styles.innerBtn}>

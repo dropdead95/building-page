@@ -1,0 +1,49 @@
+@import "./src/styles/variables";
+
+.title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  background: linear-gradient(91.24deg, #1eab5f 0.36%, #e7b97e 103.9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 32px;
+}
+.content {
+  display: flex;
+  gap: 40px;
+}
+.textBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 620px;
+}
+.text {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  line-height: 35px;
+  gap: 16px;
+}
+.arrow {
+  position: absolute;
+  right: 0;
+  bottom: 75px;
+
+}
+.formWrapper {
+  padding: 32px 40px;
+  background: #2C2C2E;
+  box-shadow: -11px -10px 51px rgba(0, 0, 0, 0.25), 0px 0px 26px rgba(0, 0, 0, 0.53), inset 4px 4px 27px rgba(137, 137, 137, 0.33);
+  border-radius: 20px;
+  flex-grow: 1;
+}
+.textForm {
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 24px;
+}

@@ -1,5 +1,59 @@
+@import "./src/styles/variables";
+
+
 .form {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.input {
+  color: $text-color;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px 16px 21px;
+  background-color: transparent;
+  border: 1px solid #1eab5f;
+  border-radius: 5px;
+  &::placeholder {
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../../../src/assets/arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 20px;
+  cursor: pointer;
+  padding: 18px 16px;
+  background-color: transparent;
+  border: 1px solid #1eab5f;
+  border-radius: 5px;
+  color: $text-color;
+  font-size: 16px;
+  line-height: 19px;
+  &::placeholder {
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+.btn {
+  width: 100%;
+  height: 50px;
+  background-color: $active-green;
+  justify-content: center;
+}
+.text {
+  font-size: 12px;
+  line-height: 14px;
+}
+.lockWrapper {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 8px;
 }

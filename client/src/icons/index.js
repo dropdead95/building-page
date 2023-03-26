@@ -20,3 +20,6 @@ export * from "./Bullet";
 export * from "./YouTube";
 export * from "./Telegram";
 export * from "./Calculator";
+export * from "./Lock";
+export * from "./Master";
+export * from "./ArrowVariant";
