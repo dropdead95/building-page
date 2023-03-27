@@ -10,13 +10,14 @@ const answersSlice = createSlice({
   reducers: {
     setAnswer: (state, action) => {
       // eslint-disable-next-line no-debugger
+      if(action.payload.answer !== null) {
+        const data = {
+          title: action.payload.title,
+          answ: action.payload.answer,
+        };
 
-      const data = {
-        title: action.payload.title,
-        answ: action.payload.answer,
-      };
-
-      state.answer.push(data);
+        state.answer.push(data);
+      }
       console.log(current(state.answer));
     },
     deleteLastAnswer: (state) => {
