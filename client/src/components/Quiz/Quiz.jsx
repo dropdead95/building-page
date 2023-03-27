@@ -1,38 +1,40 @@
-import React, { useEffect, useState } from "react";
-import { ContentWrapper, QuizContent } from "../../components";
+import React, {useEffect, useState} from "react";
+import {ContentWrapper, QuizContent} from "../../components";
 import {fetchQuizQuestion} from "../../bll/quizReducer";
 import {useDispatch, useSelector} from "react-redux";
 
 export const Quiz = () => {
-  let [questionNumber, setQuestionNumber] = useState(1);
-let dispatch = useDispatch()
-  const increaseCount = () => {
-    setQuestionNumber(++questionNumber);
-  };
+    let [questionNumber, setQuestionNumber] = useState(0);
+    let dispatch = useDispatch()
+    const increaseCount = () => {
+        setQuestionNumber(++questionNumber);
+    };
 
-  const decreaseCount = () => {
-    setQuestionNumber(--questionNumber);
-  };
+    const decreaseCount = () => {
+        setQuestionNumber(--questionNumber);
+    };
+    let questions = useSelector(state => state.quiz.quiz)
 
-  useEffect(() => {
-   dispatch(fetchQuizQuestion())
-  }, [dispatch]);
+    useEffect(() => {
+        dispatch(fetchQuizQuestion())
+    }, []);
 
-  let questions = useSelector(state => state)
-  let initialData = useSelector(state => state.initialData)
-  console.log(questions);
-  // ХУЙ
-  console.log(initialData);
 
-  return (
-    <ContentWrapper>
-      <QuizContent
-        questions={[]}
-        questionNumber={questionNumber}
-        setQuestionNumber={setQuestionNumber}
-        increaseCount={increaseCount}
-        decreaseCount={decreaseCount}
-      />
-    </ContentWrapper>
-  );
+    /*
+      let initialData = useSelector(state => state.initialData)
+    */
+    // ХУЙ
+
+
+    return (
+        <ContentWrapper>
+            {questions && <QuizContent
+                questions={questions}
+                questionNumber={questionNumber}
+                setQuestionNumber={setQuestionNumber}
+                increaseCount={increaseCount}
+                decreaseCount={decreaseCount}
+            />}
+        </ContentWrapper>
+    );
 };

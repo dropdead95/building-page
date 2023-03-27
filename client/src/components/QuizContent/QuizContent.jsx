@@ -1,4 +1,6 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
+
 
 import styles from "./QuizContent.module.scss";
 
@@ -12,7 +14,11 @@ export const QuizContent = ({
                               increaseCount,
                               decreaseCount,
                             }) => {
-  return (
+    const navigate = useNavigate();
+    const navigateToGratitude = () => {
+        navigate('gratitude', {replace: true});
+    };
+    return (
       <>
         <div className={styles.buttonBlock}>
           <MenuButton
@@ -35,7 +41,7 @@ export const QuizContent = ({
           <ContactForm />
           <div className={styles.question}>
             <div className={styles.navigation}>
-              {questions?.map((item, index) => (
+              {questions.map((item, index) => (
                   <NavigationEl
                       questionNumber={questionNumber}
                       setQuestionNumber={setQuestionNumber}
@@ -44,12 +50,15 @@ export const QuizContent = ({
                   />
               ))}
             </div>
-            <div>ТЕЛО ВОПРОСА</div>
+
+              <div>ТЕЛ ВОПРОСА</div>
             <div className={styles.buttons}>
-              <div onClick={increaseCount}>
-                <MenuButton title="Следующий вопрос" className={styles.btn} />
-              </div>
-              {questionNumber > 1 && (
+                {questions.length -1  > questionNumber ?  <div onClick={increaseCount}>
+                    <MenuButton title="Следующий вопрос" className={styles.btn} />
+                </div> : <div onClick={navigateToGratitude}>
+                    <MenuButton title="Закончить опрос" className={styles.btn} />
+                </div>}
+              {questionNumber > 0 && (
                   <div onClick={decreaseCount}>
                     <MenuButton title="Предыдущий вопрос" className={styles.btn} />
                   </div>

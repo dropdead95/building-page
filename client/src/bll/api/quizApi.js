@@ -2,6 +2,7 @@ import axios from "axios";
 
 const settings = {
     headers: {
+
         "Content-Type": "application/json",
     },}
 
@@ -12,6 +13,6 @@ export const apiInstance = axios.create({
 
 export const quizApi = {
     getQuizeQuestions() {
-        return apiInstance.get(`quizzes?populate[Quest][populate]=*`)
+        return apiInstance.get(`quizzes?populate[answer][populate]=*`)
     },
 }
