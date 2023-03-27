@@ -12,6 +12,7 @@ export const RadioButton = ({text, checked}) => {
                 type="radio"
                 name="radio"
                 id="id"
+                onChange={() => {}}
                 checked={checked}
                 onClick={(e) => e.stopPropagation()}
 
