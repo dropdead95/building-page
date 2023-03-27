@@ -6,6 +6,7 @@ import styles from "./QuizContent.module.scss";
 
 import { MenuButton, ContactForm, NavigationEl } from "../../components";
 import { Calculator } from "../../icons";
+import {QuizItem} from "../Quiz/QuizItem";
 
 export const QuizContent = ({
                               questionNumber,
@@ -41,7 +42,7 @@ export const QuizContent = ({
           <ContactForm />
           <div className={styles.question}>
             <div className={styles.navigation}>
-              {questions.map((item, index) => (
+              {questions?.map((item, index) => (
                   <NavigationEl
                       questionNumber={questionNumber}
                       setQuestionNumber={setQuestionNumber}
@@ -51,7 +52,7 @@ export const QuizContent = ({
               ))}
             </div>
 
-              <div>ТЕЛ ВОПРОСА</div>
+              <div><QuizItem data={questions[questionNumber].attributes} questionNumber={questionNumber} /></div>
             <div className={styles.buttons}>
                 {questions.length -1  > questionNumber ?  <div onClick={increaseCount}>
                     <MenuButton title="Следующий вопрос" className={styles.btn} />

@@ -1,10 +1,7 @@
 import {quizApi} from "./api/quizApi";
-import {setInitialDataAC} from "./initialReducer";
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 
-let initialState = {
-
-}
+let initialState = {}
 
 export const fetchQuizQuestion = createAsyncThunk('quiz/fetchQuizQuestion', async () => {
     return quizApi.getQuizeQuestions((data) => data.data.data);
@@ -12,7 +9,16 @@ export const fetchQuizQuestion = createAsyncThunk('quiz/fetchQuizQuestion', asyn
 const quizSlice = createSlice({
     name: 'quiz',
     initialState,
-    reducers: {},
+    reducers: {
+        changeData: (state, action) => {
+                state.quiz[action.payload.questionNumber].attributes.answer = state.quiz[action.payload.questionNumber].attributes.answer.map(t => t.id === action.payload.id ? {
+                    ...t,
+                    radioBTN: true
+                } : {...t, radioBTN: false})
+
+
+        }
+    },
 
     extraReducers: (builder) => {
         builder.addCase(fetchQuizQuestion.fulfilled, (state, action) => {
@@ -25,21 +31,8 @@ const quizSlice = createSlice({
 });
 
 
-export const {setQuizQuestionsAC} = quizSlice.actions;
+export const {changeData} = quizSlice.actions;
 
 export default quizSlice.reducer;
 
 
-export const getQuizQuestionsTC = () => {
-    return (dispatch) => {
-        quizApi.getQuizeQuestions()
-            .then((res) => {
-                dispatch(setQuizQuestionsAC(res.data.data))
-                dispatch(setInitialDataAC(true))
-            })
-            .catch((res) => {
-                console.log(res)
-            })
-
-    }
-}

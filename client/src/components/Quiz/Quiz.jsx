@@ -13,17 +13,14 @@ export const Quiz = () => {
     const decreaseCount = () => {
         setQuestionNumber(--questionNumber);
     };
-    let questions = useSelector(state => state.quiz.quiz)
+
 
     useEffect(() => {
         dispatch(fetchQuizQuestion())
     }, []);
 
+    let questions = useSelector(state => state.quiz.quiz)
 
-    /*
-      let initialData = useSelector(state => state.initialData)
-    */
-    // ХУЙ
 
 
     return (

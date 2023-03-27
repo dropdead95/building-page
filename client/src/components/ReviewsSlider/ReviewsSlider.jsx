@@ -18,7 +18,7 @@ export const ReviewsSlider = () => {
           clickable: true,
         }}
         className="slider"
-        slidesPerView={3}
+        slidesPerView={2}
         spaceBetween={30}
       >
         {reviews.map((item) => (
