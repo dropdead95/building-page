@@ -8,7 +8,7 @@ import { MenuButton, ContactForm, NavigationEl } from "../../components";
 import { Calculator } from "../../icons";
 import { QuizItem } from "../Quiz/QuizItem";
 import { useDispatch } from "react-redux";
-import { setAnswer } from "../../bll/AnswerReducer";
+import { deleteLastAnswer, setAnswer } from "../../bll/AnswerReducer";
 
 export const QuizContent = ({
   questionNumber,
@@ -27,11 +27,19 @@ export const QuizContent = ({
     );
   };
 
+  const prevQuestion = () => {
+    decreaseCount();
+    dispatch(deleteLastAnswer());
+  };
+
   const handleSetAnswer = (v) => {
     getAnswer(v);
   };
   const navigate = useNavigate();
   const navigateToGratitude = () => {
+    dispatch(
+      setAnswer({ title: questions[questionNumber].attributes.title, answer })
+    );
     navigate("gratitude", { replace: true });
   };
   return (
@@ -85,7 +93,7 @@ export const QuizContent = ({
               </div>
             )}
             {questionNumber > 0 && (
-              <div onClick={decreaseCount}>
+              <div onClick={prevQuestion}>
                 <MenuButton title="Предыдущий вопрос" className={styles.btn} />
               </div>
             )}
