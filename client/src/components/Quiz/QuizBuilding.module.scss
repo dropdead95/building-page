@@ -41,3 +41,8 @@ span {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 1200px) {
+  .buttons {
+    display: none;
+  }
+}

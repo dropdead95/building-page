@@ -1,14 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 
 
 import styles from "./QuizContent.module.scss";
 
-import { MenuButton, ContactForm, NavigationEl } from "../../components";
-import { Calculator } from "../../icons";
-import { QuizItem } from "../Quiz/QuizItem";
-import { useDispatch } from "react-redux";
-import { deleteLastAnswer, setAnswer } from "../../bll/AnswerReducer";
+import {ContactForm, MenuButton, NavigationEl} from "../../components";
+import {Calculator} from "../../icons";
+import {QuizItem} from "../Quiz/QuizItem";
+import {useDispatch} from "react-redux";
+import {deleteLastAnswer, setAnswer} from "../../bll/AnswerReducer";
 
 export const QuizContent = ({
   questionNumber,

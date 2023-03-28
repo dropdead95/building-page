@@ -21,4 +21,9 @@ export const menu = [
     id: uuidv4(),
     title: "О нас",
   },
+  {
+    id: uuidv4(),
+    title: "Квиз",
+    link: 'quiz'
+  },
 ];
