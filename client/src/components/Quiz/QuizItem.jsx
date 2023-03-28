@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Quiz.module.scss";
 import {RadioButton} from "../RadioButton/RadioButton";
-
 import {changeData} from "../../bll/quizReducer";
 import {useDispatch} from "react-redux";
 import {Input} from "../Input/Input";
@@ -46,7 +45,7 @@ export const QuizItem = ({data, questionNumber, handleSetAnswer}) => {
                     {data.answer.map((t, index) => {
                         return (
                             <div key={index} className={styles.item}>
-                                <Input data={t}/>
+                                <Input key={questionNumber} data={t}/>
                             </div>
 
                         );
