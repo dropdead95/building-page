@@ -33,7 +33,7 @@ export const Quiz = ({numberQuiz}) => {
             {data && (
                 <QuizContent
                     questions={data[params - 1].attributes.quest}
-                    objNumber={params.id - 1}
+                    objNumber={params - 1}
                     questionNumber={questionNumber}
                     setQuestionNumber={setQuestionNumber}
                     increaseCount={increaseCount}
