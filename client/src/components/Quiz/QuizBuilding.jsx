@@ -6,10 +6,7 @@ import styles from "./QuizBuilding.module.scss";
 import { Container } from "../../components";
 import { Pen } from "../../icons";
 
-
 export const QuizBuilding = () => {
-
-
   return (
     <section className={styles.wrapper}>
       <Container className={styles.quizContainer}>

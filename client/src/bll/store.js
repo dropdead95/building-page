@@ -1,16 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from "@reduxjs/toolkit";
 import quizReducer from "./quizReducer";
 import answersSlice from "./AnswerReducer";
+import meetingSlice from "./meetingReducer";
 
+export const store = configureStore({
+  reducer: {
+    quiz: quizReducer,
+    answers: answersSlice,
+    meetingData: meetingSlice,
+  },
+});
 
-
-
-export const store = configureStore({reducer: {
-        quiz: quizReducer,
-        answers: answersSlice,
-/*        initialData: initialReducer,*/
-    }}, )
-
-
-
-window.store = store; // for dev
+// window.store = store; // for dev
