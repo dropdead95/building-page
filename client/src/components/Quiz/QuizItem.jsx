@@ -44,7 +44,9 @@ export const QuizItem = ({ data, questionNumber, handleSetAnswer , objNumber}) =
       ) : (
         <div className={styles.rowImage}>
           {data.options.map((t, index) => {
-            return <Input key={index} data={t}/>
+            return <div key={index} className={styles.item}>
+              <Input key={questionNumber} data={t}/>
+            </div>
           })}
         </div>
       )}

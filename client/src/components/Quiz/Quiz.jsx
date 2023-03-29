@@ -11,7 +11,6 @@ export const Quiz = () => {
         setQuestionNumber(++questionNumber);
     };
  let params = useParams()
-    console.log(params.id)
     const decreaseCount = () => {
         setQuestionNumber(--questionNumber);
     };
@@ -21,7 +20,6 @@ export const Quiz = () => {
     }, []);
 
     let data = useSelector((state) => state.quiz.quiz);
-    console.log(data)
 
     return (
         <ContentWrapper>

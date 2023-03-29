@@ -55,7 +55,6 @@ export const Header = () => {
                             />
                         </NavLink>
                     ))}
-                    {/*  sdfsdf*/}
                 </nav>
             </Container>
         </header>
