@@ -2,10 +2,10 @@ import React from "react";
 
 import styles from "./Main.module.scss";
 import Man from "../../assets/man.png";
-import { info } from "../../mockData/info";
+import {info} from "../../mockData/info";
 
-import { Container, ServiceSubtitle, ServiceTitle } from "../../components";
-import { Arrow, Mail, Pen, WhatsUp } from "../../icons";
+import {Container, ServiceSubtitle, ServiceTitle} from "../../components";
+import {Arrow, Mail, Pen, WhatsUp} from "../../icons";
 
 export const Main = () => {
   return (

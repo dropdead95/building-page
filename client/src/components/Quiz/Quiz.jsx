@@ -4,16 +4,23 @@ import {fetchQuizQuestion} from "../../bll/quizReducer";
 import {useDispatch, useSelector} from "react-redux";
 import {useParams} from "react-router-dom";
 
-export const Quiz = () => {
+export const Quiz = ({numberQuiz}) => {
     let [questionNumber, setQuestionNumber] = useState(0);
     let dispatch = useDispatch();
     const increaseCount = () => {
         setQuestionNumber(++questionNumber);
     };
-    let params = useParams()
+    let idURL = useParams()
     const decreaseCount = () => {
         setQuestionNumber(--questionNumber);
     };
+    let params
+    if (numberQuiz) {
+        params = numberQuiz
+    } else {
+        params = idURL.id
+    }
+    console.log(params)
 
     useEffect(() => {
         dispatch(fetchQuizQuestion())
@@ -25,7 +32,7 @@ export const Quiz = () => {
         <ContentWrapper>
             {data && (
                 <QuizContent
-                    questions={data[params.id - 1].attributes.quest}
+                    questions={data[params - 1].attributes.quest}
                     objNumber={params.id - 1}
                     questionNumber={questionNumber}
                     setQuestionNumber={setQuestionNumber}
