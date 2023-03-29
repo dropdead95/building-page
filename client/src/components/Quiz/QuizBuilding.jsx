@@ -3,7 +3,7 @@ import {Outlet} from "react-router-dom";
 
 import styles from "./QuizBuilding.module.scss";
 
-import {Container} from "../../components";
+import {Container} from "../Container";
 import {Pen} from "../../icons";
 
 
