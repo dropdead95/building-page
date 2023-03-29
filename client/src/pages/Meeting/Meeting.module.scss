@@ -1,6 +1,63 @@
+.meeting {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
 .textContent {
-  max-width: 500px;
+  flex-grow: 1;
 }
 .wrapper {
   display: flex;
+  gap: 37px;
+  margin-bottom: 80px;
+}
+.title {
+  font-size: 40px;
+  line-height: 47px;
+  background: linear-gradient(91.24deg, #1eab5f 0.36%, #e7b97e 103.9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 16px;
+}
+.subtitle {
+  font-size: 30px;
+  line-height: 35px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.video {
+  border-radius: 5px;
+}
+
+.gifts {
+  display: flex;
+  flex-direction: column;
+}
+
+.giftsBlock {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.gift {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: 427px;
+}
+.desc {
+  font-size: 20px;
+  line-height: 23px;
+}
+.firstText {
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 40px;
+}
+.secondText {
+  margin-bottom: 24px;
 }

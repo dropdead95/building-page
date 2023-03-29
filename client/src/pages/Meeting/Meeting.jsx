@@ -11,7 +11,7 @@ export const Meeting = () => {
 
   useEffect(() => {
     dispatch(fetchMeetingData());
-  }, []);
+  }, [dispatch]);
   console.log(data.meetingData.attributes);
 
   return (
@@ -21,13 +21,43 @@ export const Meeting = () => {
           <Container className={styles.meetingContainer}>
             <div className={styles.wrapper}>
               <div className={styles.textContent}>
-                <h1></h1>
-                <h3></h3>
+                <h1 className={styles.title}>
+                  {data.meetingData.attributes.main.title}
+                </h1>
+                <h3 className={styles.subtitle}>
+                  {data.meetingData.attributes.main.subtitle}
+                </h3>
                 <p>ФОРМА</p>
-                <video
-                  controls
-                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.meetingData.attributes.main.video.data.attributes.url}`}
-                ></video>
+              </div>
+              <video
+                className={styles.video}
+                width="660px"
+                controls={true}
+                src={`${process.env.REACT_APP_UPLOAD_URL}${data.meetingData.attributes.main.video.data.attributes.url}`}
+              ></video>
+            </div>
+            <div className={styles.gifts}>
+              <div className={styles.textBlock}>
+                <p className={styles.firstText}>
+                  {data.meetingData.attributes.main.firstText}
+                </p>
+                <p className={styles.secondText}>
+                  {data.meetingData.attributes.main.secondText}
+                </p>
+                <p className={styles.secondText}>
+                  {data.meetingData.attributes.main.thirdText}
+                </p>
+              </div>
+              <div className={styles.giftsBlock}>
+                {data.meetingData.attributes.main.block.map((item) => (
+                  <div className={styles.gift} key={item.id}>
+                    <img
+                      src={`${process.env.REACT_APP_UPLOAD_URL}${item.image.data.attributes.url}`}
+                      alt=""
+                    />
+                    <p className={styles.desc}>{item.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </Container>
