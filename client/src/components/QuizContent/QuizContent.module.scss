@@ -30,7 +30,7 @@
 }
 .buttons {
   display: flex;
-  flex-wrap: wrap;
+
 }
 .btn {
   width: 23vw;
@@ -48,6 +48,9 @@
  .feature {
    display: none;
  }
+  .buttons {
+  flex-wrap: wrap;
+  }
 }
 @media (max-width: 992px) {
   .quizWrapper {

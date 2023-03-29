@@ -24,6 +24,6 @@ export const menu = [
   {
     id: uuidv4(),
     title: "Квиз",
-    link: 'quiz'
+    link: 'quiz/1'
   },
 ];
