@@ -12,9 +12,9 @@ export const App = () => {
                 <Route index element={<Main/>}/>
                 <Route path={"quiz"} element={<QuizBuilding/>}>
                     <Route path=":id" element={<Quiz/>}/>
+                    <Route path=":id/gratitude" element={<Gratitude/>}/>
 
                 </Route>
-                <Route path="gratitude" element={<Gratitude/>}/>
 
 
             </Route>

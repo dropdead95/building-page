@@ -1,42 +1,42 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 
 import styles from "./QuizBuilding.module.scss";
 
-import { Container } from "../../components";
-import { Pen } from "../../icons";
+import {Container} from "../../components";
+import {Pen} from "../../icons";
 
 
 export const QuizBuilding = () => {
 
 
-  return (
-    <section className={styles.wrapper}>
-      <Container className={styles.quizContainer}>
-        <p className={styles.info}>
-          ВЫПОЛНИМ РЕМОНТ по договору за фиксированную цену и к указанному
-          сроку.
-          <span>Гарантия до 5 лет.</span>
-        </p>
-        <Outlet />
-        <div className={styles.buttons}>
-          <button type="button" className={styles.btn}>
+    return (
+        <section className={styles.wrapper}>
+            <Container>
+                <p className={styles.info}>
+                    ВЫПОЛНИМ РЕМОНТ по договору за фиксированную цену и к указанному
+                    сроку.
+                    <span>Гарантия до 5 лет.</span>
+                </p>
+                <Outlet/>
+                <div className={styles.buttons}>
+                    <button type="button" className={styles.btn}>
             <span className={styles.innerBtn}>
-              Выполненные ремонты <Pen className={styles.pen} />
+              Выполненные ремонты <Pen className={styles.pen}/>
             </span>
-          </button>
-          <button type="button" className={styles.btn}>
+                    </button>
+                    <button type="button" className={styles.btn}>
             <span className={styles.innerBtn}>
-              Полезные статьи по теме <Pen className={styles.pen} />
+              Полезные статьи по теме <Pen className={styles.pen}/>
             </span>
-          </button>
-          <button type="button" className={styles.btn}>
+                    </button>
+                    <button type="button" className={styles.btn}>
             <span className={styles.innerBtn}>
-              Выезд прораба на ваш объект <Pen className={styles.pen} />
+              Выезд прораба на ваш объект <Pen className={styles.pen}/>
             </span>
-          </button>
-        </div>
-      </Container>
-    </section>
-  );
+                    </button>
+                </div>
+            </Container>
+        </section>
+    );
 };

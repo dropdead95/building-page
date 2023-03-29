@@ -20,6 +20,8 @@ export const QuizContent = ({
 
                             }) => {
     const [answer, getAnswer] = useState(null);
+    let [disabledButton, seDisabledButton] = useState ('disabled')
+
     const dispatch = useDispatch();
 
     const changeQuestion = () => {
@@ -27,21 +29,26 @@ export const QuizContent = ({
         dispatch(
             setAnswer({title: questions[questionNumber].title, answer})
         );
+        seDisabledButton('disabled')
+
+
     };
     const prevQuestion = () => {
         decreaseCount();
         dispatch(deleteLastAnswer());
+        seDisabledButton('')
     };
 
     const handleSetAnswer = (v) => {
         getAnswer(v);
+        seDisabledButton('')
     };
     const navigate = useNavigate();
     const navigateToGratitude = () => {
         dispatch(
             setAnswer({title: questions[questionNumber].title, answer})
         );
-        navigate("/gratitude", {replace: true});
+        navigate("gratitude", {replace: true});
     };
     return (
         <>
@@ -78,6 +85,7 @@ export const QuizContent = ({
 
                     <div>
                         <QuizItem
+
                             objNumber={objNumber}
                             handleSetAnswer={handleSetAnswer}
                             data={questions[questionNumber]}
@@ -87,11 +95,11 @@ export const QuizContent = ({
                     <div className={styles.buttons}>
                         {questions.length - 1 > questionNumber ? (
                             <div onClick={changeQuestion}>
-                                <MenuButton title="Следующий вопрос" className={styles.btn}/>
+                                <MenuButton disabled={disabledButton} title="Следующий вопрос" className={styles.btn}/>
                             </div>
                         ) : (
                             <div onClick={navigateToGratitude}>
-                                <MenuButton title="Закончить опрос" className={styles.btn}/>
+                                <MenuButton disabled={disabledButton} title="Закончить опрос" className={styles.btn}/>
                             </div>
                         )}
                         {questionNumber > 0 && (

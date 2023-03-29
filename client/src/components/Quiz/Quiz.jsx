@@ -10,7 +10,7 @@ export const Quiz = () => {
     const increaseCount = () => {
         setQuestionNumber(++questionNumber);
     };
- let params = useParams()
+    let params = useParams()
     const decreaseCount = () => {
         setQuestionNumber(--questionNumber);
     };
@@ -25,8 +25,8 @@ export const Quiz = () => {
         <ContentWrapper>
             {data && (
                 <QuizContent
-                    questions={data[params.id-1].attributes.quest}
-                    objNumber={params.id-1}
+                    questions={data[params.id - 1].attributes.quest}
+                    objNumber={params.id - 1}
                     questionNumber={questionNumber}
                     setQuestionNumber={setQuestionNumber}
                     increaseCount={increaseCount}
