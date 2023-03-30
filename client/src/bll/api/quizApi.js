@@ -7,7 +7,7 @@ const settings = {
 };
 
 export const apiInstance = axios.create({
-    baseURL: "http://localhost:1337/api",
+    baseURL: process.env.REACT_APP_API_URL,
     ...settings,
 });
 
@@ -19,7 +19,12 @@ export const quizApi = {
 };
 
 export const meetingApi = {
-  getMeetingData() {
-    return apiInstance.get("meeting?populate=deep");
-  },
+    getMeetingData() {
+        return apiInstance.get("meeting?populate=deep");
+    },
+};
+export const photoApi = {
+    getPhotoData() {
+        return apiInstance.get("photo-galleries?populate=deep");
+    },
 };
