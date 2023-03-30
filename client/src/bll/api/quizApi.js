@@ -14,6 +14,6 @@ export const apiInstance = axios.create({
 export const quizApi = {
 
     getQuizeQuestions() {
-        return apiInstance.get(`quis?populate=deep`);
+        return apiInstance.get(`quizzes?populate=deep`);
     },
 };

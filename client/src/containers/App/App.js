@@ -3,6 +3,7 @@ import {Route, Routes} from "react-router-dom";
 
 import {Layout, Main} from "../../pages";
 import {Gratitude, Quiz, QuizBuilding} from "../../components";
+import {PhotoContainer} from "../../components/PhotoGallery/PhotoContainer";
 
 export const App = () => {
 
@@ -15,6 +16,8 @@ export const App = () => {
                     <Route path=":id/gratitude" element={<Gratitude/>}/>
 
                 </Route>
+                <Route path="gallery" element={<PhotoContainer />}/>
+
 
 
             </Route>
