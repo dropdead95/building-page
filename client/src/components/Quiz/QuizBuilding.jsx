@@ -1,12 +1,14 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 
 import styles from "./QuizBuilding.module.scss";
 
-import { Container } from "../../components";
-import { Pen } from "../../icons";
+import {Container} from "../Container";
+import {Pen} from "../../icons";
 
 export const QuizBuilding = () => {
+
+
   return (
     <section className={styles.wrapper}>
       <Container className={styles.quizContainer}>

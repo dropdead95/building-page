@@ -29,7 +29,7 @@ export const QuizItem = ({ data, questionNumber, handleSetAnswer , objNumber}) =
                 {t.image.data !== null && (
                   <img
                     src={
-                      "http://localhost:1337" + t.image.data[0].attributes.url
+                      "http://localhost:1337" + t.image.data[0].attributes.formats.thumbnail.url
                     }
                     alt="image"
                   />

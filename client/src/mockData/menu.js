@@ -26,4 +26,9 @@ export const menu = [
     title: "Квиз",
     link: 'quiz/1'
   },
+  {
+    id: uuidv4(),
+    title: "Фотогалерея",
+    link: 'gallery'
+  },
 ];
