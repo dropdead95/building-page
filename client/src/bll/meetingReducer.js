@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { meetingApi } from "./api/quizApi";
 
 const initialState = {
-  meetingData: [],
+  meetingData: {},
 };
 
 export const fetchMeetingData = createAsyncThunk(

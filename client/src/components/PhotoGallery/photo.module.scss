@@ -67,8 +67,21 @@
   color: #1EAB5F
 }
 .photoItem {
+  padding: 20px;
   width: 426px;
   height: 321px;
   border: 2px solid rgb(70,65,65);
   border-radius: 5px;
+}
+
+.mainPhoto {
+  width: 100%;
+  max-height: 242px;
+  object-fit: cover;
+  border-radius: 5px;
+
+
+}
+.mainPhoto {
+
 }

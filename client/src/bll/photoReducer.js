@@ -6,7 +6,8 @@ let initialState = {};
 export const fetchPhotoGallery = createAsyncThunk(
     "photo/fetchPhotoGallery",
     async () => {
-        photoApi.getPhotoData((data) => console.log(data.data));
+        return photoApi.getPhotoData((data) => data.data);
+
     }
 );
 const photoSlice = createSlice({
@@ -16,7 +17,7 @@ const photoSlice = createSlice({
 
     extraReducers: (builder) => {
         builder.addCase(fetchPhotoGallery.fulfilled, (state, action) => {
-            state.photo = action.payload.data.data;
+            state.photo= action.payload.data.data
         });
     },
 });

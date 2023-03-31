@@ -4683,6 +4683,11 @@ fsevents@^2.3.2, fsevents@~2.3.2:
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
+fslightbox-react@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.npmjs.org/fslightbox-react/-/fslightbox-react-1.7.2.tgz"
+  integrity sha512-al1WiKKZVlk+9hP3I++GWgAka4mUKS6A/PpaCGTC2U0EN3g52q/CelwTjMhmFjHTxU8mSTKGEorClDMT9/O4yw==
+
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz"
@@ -7696,7 +7701,7 @@ react-is@^18.0.0:
 
 react-redux@^8.0.5:
   version "8.0.5"
-  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-8.0.5.tgz#e5fb8331993a019b8aaf2e167a93d10af469c7bd"
+  resolved "https://registry.npmjs.org/react-redux/-/react-redux-8.0.5.tgz"
   integrity sha512-Q2f6fCKxPFpkXt1qNRZdEDLlScsDWyrgSj0mliK59qU6W5gvBiKkdMEG2lJzhd1rCctf0hb6EtePPLZ2e0m1uw==
   dependencies:
     "@babel/runtime" "^7.12.1"
