@@ -6,7 +6,7 @@ import {useDispatch} from "react-redux";
 import {changeData} from "../../bll/quizReducer";
 import {Input} from "../Input/Input";
 
-export const QuizItem = ({ data, questionNumber, handleSetAnswer , objNumber}) => {
+export const QuizItem = ({ data, questionNumber, handleSetAnswer , objNumber, setDisabledButton}) => {
   const dispatch = useDispatch();
   const setData = (answer, id) => {
     // eslint-disable-next-line no-debugger
@@ -45,7 +45,7 @@ export const QuizItem = ({ data, questionNumber, handleSetAnswer , objNumber}) =
         <div className={styles.rowImage}>
           {data.options.map((t, index) => {
             return <div key={index} className={styles.item}>
-              <Input key={questionNumber} data={t}/>
+              <Input key={questionNumber} setDisabledButton={setDisabledButton} data={t}/>
             </div>
           })}
         </div>

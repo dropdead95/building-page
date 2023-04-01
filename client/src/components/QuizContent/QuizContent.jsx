@@ -20,7 +20,7 @@ export const QuizContent = ({
 
                             }) => {
     const [answer, getAnswer] = useState(null);
-    let [disabledButton, seDisabledButton] = useState ('disabled')
+    let [disabledButton, setDisabledButton] = useState ('disabled')
 
     const dispatch = useDispatch();
 
@@ -29,19 +29,19 @@ export const QuizContent = ({
         dispatch(
             setAnswer({title: questions[questionNumber].title, answer})
         );
-        seDisabledButton('disabled')
+        setDisabledButton('disabled')
 
 
     };
     const prevQuestion = () => {
         decreaseCount();
         dispatch(deleteLastAnswer());
-        seDisabledButton('')
+        setDisabledButton('')
     };
 
     const handleSetAnswer = (v) => {
         getAnswer(v);
-        seDisabledButton('')
+        setDisabledButton('')
     };
     const navigate = useNavigate();
     const navigateToGratitude = () => {
@@ -86,6 +86,7 @@ export const QuizContent = ({
                     <div>
                         <QuizItem
 
+                            setDisabledButton={setDisabledButton}
                             objNumber={objNumber}
                             handleSetAnswer={handleSetAnswer}
                             data={questions[questionNumber]}

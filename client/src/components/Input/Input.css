@@ -1,7 +1,6 @@
 
 .text-field {
-    width: 23vw;
-min-width: 200px;
+    width: 400px;
 }
 
 .text-field__label {
