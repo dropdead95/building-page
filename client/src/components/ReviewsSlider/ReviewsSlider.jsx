@@ -7,7 +7,6 @@ import "./ReviewsSlider.scss";
 
 import { reviews } from "../../mockData/reviews";
 import { Review } from "../Review";
-import { Bullet } from "../../icons";
 
 export const ReviewsSlider = () => {
   return (
@@ -26,12 +25,6 @@ export const ReviewsSlider = () => {
             <Review image={item.image} />
           </SwiperSlide>
         ))}
-        <div className="swiper-pagination">
-          <Bullet className="swiper-pagination-bullet swiper-pagination-bullet-active" />
-          <Bullet />
-          <Bullet />
-          <Bullet />
-        </div>
       </Swiper>
     </>
   );

@@ -1,17 +1,23 @@
 .slider {
+  position: relative;
   width: 660px;
 }
 .swiper {
   position: unset;
 }
-.swiper-pagination {
-  display: flex;
-  gap: 16px;
-  padding-top: 23px;
-  left: 29%;
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  position: absolute;
+  left: -355px;
+  bottom: -720px;
 }
+
+.swiper-pagination-bullet,
 .swiper-pagination-bullet-active {
-  fill: #f0eeee;
   width: 12px;
   height: 12px;
+  background: #f0eeee;
 }
