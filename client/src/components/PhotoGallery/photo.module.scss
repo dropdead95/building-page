@@ -19,6 +19,9 @@
 }
 
 .photoListsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
   width: 893px;
 }
 
@@ -72,16 +75,22 @@
   height: 321px;
   border: 2px solid rgb(70,65,65);
   border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+
 }
+
+.photoItem span{
+  font-size: 20px;
+  line-height: 23px;
+}
+
 
 .mainPhoto {
   width: 100%;
   max-height: 242px;
   object-fit: cover;
   border-radius: 5px;
-
-
-}
-.mainPhoto {
+  margin-bottom: 16px;
 
 }
