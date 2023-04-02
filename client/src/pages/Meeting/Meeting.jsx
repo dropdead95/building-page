@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchMeetingData } from "../../bll/meetingReducer";
 
 import styles from "./Meeting.module.scss";
-import { Container } from "../../components";
+import {Basic, Container, Quiz} from "../../components";
 
 export const Meeting = () => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ export const Meeting = () => {
             <div className={styles.textContent}>
               <h1 className={styles.title}>{data?.title}</h1>
               <h3 className={styles.subtitle}>{data?.subtitle}</h3>
-              <p>ФОРМА</p>
+              <Basic />
             </div>
             <video
               className={styles.video}
@@ -51,6 +51,7 @@ export const Meeting = () => {
                 </div>
               ))}
             </div>
+            <Quiz numberQuiz={2} />
           </div>
         </Container>
       )}
