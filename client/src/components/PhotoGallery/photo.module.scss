@@ -77,6 +77,8 @@
   border-radius: 5px;
   cursor: pointer;
   box-sizing: border-box;
+  transition: transform .2s;
+
 
 }
 
@@ -92,12 +94,15 @@
   object-fit: cover;
   border-radius: 5px;
   margin-bottom: 16px;
-  transition: transform .2s;
 
 }
-.photoItem img:hover {
-  transform: scale(1.1)
+.photoItem:hover {
+  transform: scale(1.05)
 
+}
+
+.active {
+  color: #E7B97E;
 }
 
 

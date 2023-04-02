@@ -4,11 +4,12 @@ import {MenuButton} from "../MenuButton";
 import {ContactFormPhoto} from "./ContactFormPhoto";
 
 
-export const NavigationContainer = ({data, setFolder}) => {
+export const NavigationContainer = ({data, folder, setFolder}) => {
     return <div className={styles.NavigationWrapper}>
         {data?.map((t, index) => {
+
             return <div key={index} onClick={() => setFolder(index)}><MenuButton title={t.attributes.folder}
-                                                                                 className={styles.PhotoNavigationButton}/>
+                                                                                 className={folder === index ? `${styles.PhotoNavigationButton} ${styles.active}` : styles.PhotoNavigationButton}/>
             </div>
         })}
         <ContactFormPhoto/>
