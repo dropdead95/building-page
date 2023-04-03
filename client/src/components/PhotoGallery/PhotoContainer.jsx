@@ -21,7 +21,7 @@ export const PhotoContainer = () => {
             <h2 className={styles.title}>Фотогалерея</h2>
             <div className={styles.wrapper}>
                 <NavigationContainer data={data} folder={folder} setFolder={setFolder}/>
-                <PhotoList folder={data[folder].attributes.photo}/>
+                <PhotoList key={folder} folder={data[folder].attributes.photo}/>
             </div>
         </Container>}
     </section>

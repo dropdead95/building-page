@@ -51,8 +51,7 @@ export const PhotoList = ({folder}) => {
             }}
             showFirstNumberAlways={true}
             showLastNumberAlways={true}
-            navStart="&#171;" // Here you can pass anything (Text, HTML Tag, React Component, ...)
-            navEnd="&#187;" // Here you can pass anything (Text, HTML Tag, React Component, ...)
+
             navPrev="&#x2039;" // Here you can pass anything (Text, HTML Tag, React Component, ...)
             navNext="&#x203a;" // Here you can pass anything (Text, HTML Tag, React Component, ...)
             navPrevCustom={{
