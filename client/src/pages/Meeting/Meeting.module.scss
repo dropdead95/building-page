@@ -4,6 +4,7 @@
 }
 
 .textContent {
+  max-width: 663px;
   flex-grow: 1;
 }
 .wrapper {
@@ -35,6 +36,7 @@
 .gifts {
   display: flex;
   flex-direction: column;
+  margin-bottom: 80px;
 }
 
 .giftsBlock {
@@ -61,3 +63,60 @@
 .secondText {
   margin-bottom: 24px;
 }
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.titleForm {
+  margin-bottom: 16px;
+}
+.wrapperExample {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 80px;
+}
+.titleBlock {
+  font-size: 30px;
+  line-height: 35px;
+}
+.mediaContent {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.imageGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.videoGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+}
+.text {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+.textTitle {
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+.descWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.description {
+  display: flex;
+  gap: 16px;
+}
+

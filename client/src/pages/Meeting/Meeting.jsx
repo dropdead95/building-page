@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchMeetingData } from "../../bll/meetingReducer";
 
 import styles from "./Meeting.module.scss";
-import {Basic, Container, Quiz} from "../../components";
+import { Basic, Container, Quiz } from "../../components";
+import { CheckMark } from "../../icons";
 
 export const Meeting = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,9 @@ export const Meeting = () => {
             <div className={styles.textContent}>
               <h1 className={styles.title}>{data?.title}</h1>
               <h3 className={styles.subtitle}>{data?.subtitle}</h3>
+              <p className={styles.titleForm}>
+                Оставьте заявку на БЕСПЛАТНУЮ встречу с прорабом!
+              </p>
               <Basic />
             </div>
             <video
@@ -34,6 +38,7 @@ export const Meeting = () => {
               src={`${process.env.REACT_APP_UPLOAD_URL}${data?.video?.data?.attributes?.url}`}
             ></video>
           </div>
+
           <div className={styles.gifts}>
             <div className={styles.textBlock}>
               <p className={styles.firstText}>{data.firstText}</p>
@@ -51,7 +56,64 @@ export const Meeting = () => {
                 </div>
               ))}
             </div>
-            <Quiz numberQuiz={2} />
+          </div>
+          <Quiz numberQuiz={1} />
+          <div className={styles.wrapperExample}>
+            <h3 className={styles.titleBlock}>{data.example[0].title}</h3>
+            <div className={styles.mediaContent}>
+              <img
+                src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[3].attributes.url}`}
+                alt=""
+              />
+              <div className={styles.imageGroup}>
+                <img
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[0].attributes.url}`}
+                  alt=""
+                />
+                <img
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[1].attributes.url}`}
+                  alt=""
+                />
+                <img
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[2].attributes.url}`}
+                  alt=""
+                />
+              </div>
+              <div className={styles.videoGroup}>
+                <video
+                  className={styles.video}
+                  width="427px"
+                  controls={true}
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[4].attributes.url}`}
+                ></video>
+                <video
+                  className={styles.video}
+                  width="427px"
+                  controls={true}
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[4].attributes.url}`}
+                ></video>
+              </div>
+            </div>
+            <div className={styles.text}>
+              <div className={styles.textWrapper}>
+                <h3 className={styles.textTitle}>
+                  {data.example[0].textContent.title}
+                </h3>
+                <div className={styles.descWrapper}>
+                  {data.example[0].textContent.descriptions.map((desc) => (
+                    <div className={styles.description} key={desc.id}>
+                      <CheckMark className={styles.checkIcon} />
+                      <p>{desc.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <img
+                src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[5].attributes.url}`}
+                alt=""
+              />
+            </div>
+            <div className={styles.actions}></div>
           </div>
         </Container>
       )}
