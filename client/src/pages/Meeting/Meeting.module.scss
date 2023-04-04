@@ -1,3 +1,5 @@
+@import "./src/styles/variables";
+
 .meeting {
   padding-top: 50px;
   padding-bottom: 80px;
@@ -119,4 +121,93 @@
   display: flex;
   gap: 16px;
 }
+.actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 53px;
+  margin-bottom: 80px;
+}
+.actionsTitle {
+  color: $active-green;
+  max-width: 893px;
+  margin-bottom: 0;
+}
+.btn {
+  width: 100%;
+  color: #f0fcf6;
+  background: #1eab5f;
+  border-radius: 5px;
+  padding: 18.5px 0;
+  justify-content: center;
+}
+.wrapperBtn {
+  width: 49.4%;
+}
+.arrow {
+  position: absolute;
+  left: 50%;
+  top: 54px;
+}
+.visual {
+  margin-bottom: 80px;
+}
 
+.visualTitle {
+  margin-bottom: 40px;
+}
+.visualSubtitle {
+  max-width: 804px;
+  margin-bottom: 24px;
+}
+.visualMedia {
+  display: flex;
+  gap: 40px;
+}
+.visualImages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.visualForm {
+  padding: 20px;
+  background: #2c2c2e;
+  box-shadow: -11px -10px 51px rgba(0, 0, 0, 0.25),
+    0px 0px 26px rgba(0, 0, 0, 0.53);
+  border-radius: 5px;
+  flex: 427px;
+}
+.contactsFormWrapper {
+  width: 100%;
+}
+.contactsForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  row-gap: 24px;
+}
+.contactsFormInput {
+  flex: 426px;
+}
+.contactsFormSelect {
+  flex: 426px;
+}
+.contactsFormBtn {
+  width: 31.4%;
+}
+.contactsFormTextarea {
+  flex-grow: 1;
+  height: 56px;
+  resize: none;
+
+}
+.contactsTitle {
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 16px;
+}
+.btnWrapper {
+
+}

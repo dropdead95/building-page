@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchMeetingData } from "../../bll/meetingReducer";
 
 import styles from "./Meeting.module.scss";
-import { Basic, Container, Quiz } from "../../components";
-import { CheckMark } from "../../icons";
+import { Basic, Container, Quiz, MenuButton } from "../../components";
+import { ArrowVariant, CheckMark } from "../../icons";
+import classNames from "classnames";
 
 export const Meeting = () => {
   const dispatch = useDispatch();
@@ -113,7 +114,62 @@ export const Meeting = () => {
                 alt=""
               />
             </div>
-            <div className={styles.actions}></div>
+            <div className={styles.actions}>
+              <h3 className={classNames(styles.textTitle, styles.actionsTitle)}>
+                {data.actions.title}
+              </h3>
+              <MenuButton
+                classNameForBtn={styles.wrapperBtn}
+                title="Записаться"
+                className={styles.btn}
+              />
+              <ArrowVariant className={styles.arrow} />
+            </div>
+            <div className={styles.visual}>
+              <h3 className={classNames(styles.titleBlock, styles.visualTitle)}>
+                {data.visual.title}
+              </h3>
+              <p className={styles.visualSubtitle}>{data.visual.subtitle}</p>
+              <div className={styles.visualMedia}>
+                <Basic
+                  lockText={true}
+                  className={styles.visualForm}
+                  titleForm="Заявка на заказ 3д визуализации. "
+                />
+                <video
+                  className={styles.video}
+                  width="660px"
+                  height="370px"
+                  controls={true}
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.visual.video.data.attributes.url}`}
+                ></video>
+                <div className={styles.visualImages}>
+                  <img
+                    src={`${process.env.REACT_APP_UPLOAD_URL}${data.visual.images.data[0].attributes.url}`}
+                    alt=""
+                  />
+                  <img
+                    src={`${process.env.REACT_APP_UPLOAD_URL}${data.visual.images.data[1].attributes.url}`}
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div className={styles.contacts}>
+              <p className={styles.contactsTitle}>{data.contacts.title}</p>
+              <p className={styles.visualSubtitle}>{data.contacts.subtitle}</p>
+              <Basic
+                className={styles.contactsFormWrapper}
+                classNameForm={styles.contactsForm}
+                classNameInput={styles.contactsFormInput}
+                classNameSelect={styles.contactsFormSelect}
+                classNameForTextarea={styles.contactsFormTextarea}
+                inputVariant={true}
+                classNameForBtn={styles.contactsFormBtn}
+                btnText="Записаться"
+                lockText={true}
+              />
+            </div>
           </div>
         </Container>
       )}
