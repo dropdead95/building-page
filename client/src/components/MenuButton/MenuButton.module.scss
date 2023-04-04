@@ -17,5 +17,17 @@
     border-color: $text-color;
   }
 }
+.wrapper {
+  width: 100%;
+}
 
-
+.text {
+  font-size: 12px;
+  line-height: 14px;
+}
+.lockWrapper {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 8px;
+}
