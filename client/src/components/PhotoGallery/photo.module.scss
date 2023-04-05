@@ -17,6 +17,17 @@
 .NavigationWrapper {
   width: 427px;
 }
+.searchInput{
+  padding: 18px;
+  width: 427px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 4px 4px 25px rgba(241, 241, 241, 0.25);
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  line-height: 19px;
+}
 .photoListsWrapper {
   display: flex;
   flex-direction: column;

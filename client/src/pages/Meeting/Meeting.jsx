@@ -63,20 +63,20 @@ export const Meeting = () => {
             <h3 className={styles.titleBlock}>{data.example[0].title}</h3>
             <div className={styles.mediaContent}>
               <img
-                src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[3].attributes.url}`}
+                src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[3]?.attributes.url}`}
                 alt=""
               />
               <div className={styles.imageGroup}>
                 <img
-                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[0].attributes.url}`}
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[0]?.attributes.url}`}
                   alt=""
                 />
                 <img
-                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[1].attributes.url}`}
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[1]?.attributes.url}`}
                   alt=""
                 />
                 <img
-                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[2].attributes.url}`}
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[2]?.attributes.url}`}
                   alt=""
                 />
               </div>
@@ -85,13 +85,13 @@ export const Meeting = () => {
                   className={styles.video}
                   width="427px"
                   controls={true}
-                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[4].attributes.url}`}
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[4]?.attributes.url}`}
                 ></video>
                 <video
                   className={styles.video}
                   width="427px"
                   controls={true}
-                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[4].attributes.url}`}
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[4]?.attributes.url}`}
                 ></video>
               </div>
             </div>
@@ -110,7 +110,7 @@ export const Meeting = () => {
                 </div>
               </div>
               <img
-                src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[5].attributes.url}`}
+                src={`${process.env.REACT_APP_UPLOAD_URL}${data.example[0].mediaContent.data[5]?.attributes.url}`}
                 alt=""
               />
             </div>
@@ -141,15 +141,15 @@ export const Meeting = () => {
                   width="660px"
                   height="370px"
                   controls={true}
-                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.visual.video.data.attributes.url}`}
+                  src={`${process.env.REACT_APP_UPLOAD_URL}${data.visual.video.data?.attributes.url}`}
                 ></video>
                 <div className={styles.visualImages}>
                   <img
-                    src={`${process.env.REACT_APP_UPLOAD_URL}${data.visual.images.data[0].attributes.url}`}
+                    src={`${process.env.REACT_APP_UPLOAD_URL}${data.visual.images.data[0]?.attributes.url}`}
                     alt=""
                   />
                   <img
-                    src={`${process.env.REACT_APP_UPLOAD_URL}${data.visual.images.data[1].attributes.url}`}
+                    src={`${process.env.REACT_APP_UPLOAD_URL}${data.visual.images.data[1]?.attributes.url}`}
                     alt=""
                   />
                 </div>
